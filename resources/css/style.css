@@ -1,7 +1,15 @@
+/* Style Root */
+
 html {
   font-size: 18px;
   line-height: 1.4;
   font-family: Helvetica;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
 }
 
 /* Style Header */
@@ -18,13 +26,6 @@ header {
   justify-content: flex-start;
   flex-direction: column;
   align-items: flex-end;
-}
-
-.container {
-  width: 960px;
-  margin: 0 auto;
-  display: flex;
-
 }
 
 .subcontainer {
@@ -76,7 +77,6 @@ a {
 /* Style Body */
 
 #content {
-  /*border: 1px dashed black;*/
   margin-top: 3rem;
   margin-bottom: 4rem;
   display: flex;
@@ -103,12 +103,9 @@ height of 8rem breaks the design at the desktop size */
   width: 100%;
   display: flex;
   justify-content: center;
-  /*border: 1px dashed black;*/
-  /*margin-bottom: 5rem;*/
 }
 
 #contact .box {
-  /*border: 1px dashed red;*/
   width: 35%;
   margin-right: 5%;
 }
@@ -185,27 +182,110 @@ footer p {
 /* Phone Sized Break Points */
 
 @media only screen and (max-width: 480px) {
+
+  .container {
+    width: 100%;
+    height: auto;
+  }
+
+  header {
+    background-position: 20%;
+    margin-bottom: 3.77rem;
+  }
+
+/* Restyle Top Menu */
+  .subcontainer {
+  margin-bottom: 9rem;
+  }
+
+  .subcontainer img {
+    padding: 0.5rem;
+  }
+
+  .subcontainer p {
+    display: none;
+  }
+
   #menu1 {
     display: none;
   }
   #menu2 {
     display: inline;
   }
-  .container {
+
+  nav li {
+    padding-right: 1rem;
+  }
+
+  #banner {
+    height: 17rem;
+    align-items: center;
+  }
+
+  #tagline {
     width: 100%;
+    padding-right: 7rem;
+    padding-left: 7rem;
+    margin-top: 1rem;
+  }
+  #tagline h1 {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0rem;
+    text-align: center;
+  }
+
+/*Restyle content */
+  #content {
+    font-size: 0.77rem;
+  }
+  #services {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.54rem;
   }
 
   #content .box {
-    padding: 0rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 1.54rem;
   }
 
-
-  #services {
-    /*width: 100%;*/
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
-    /*height: auto;*/
+  #services img{
+    max-width: 42%;
+    height: auto;
   }
 
+  #services p {
+    margin: 0 auto;
+  }
 
+  #contact {
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+  }
+  #contact .box {
+    width: 100%;
+  }
+  #contact h2 {
+    width: 100%;
+    text-align: center;
+  }
+  #contact p {
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  footer {
+    width: 100%;
+    justify-content: center;
+  }
+  footer img {
+    margin: 1rem auto;
+  }
+  footer p {
+    display: none;
+  }
 }
