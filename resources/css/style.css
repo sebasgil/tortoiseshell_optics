@@ -23,7 +23,6 @@ header {
 .container {
   width: 960px;
   margin: 0 auto;
-  /*border: 1px dashed black;*/
   display: flex;
 
 }
@@ -43,7 +42,6 @@ header {
 
 #banner .box {
   font-size: 1rem;
-  /*border: 1px dashed red;*/
   color: white;
   display: inline-flex;
   align-items: center;
@@ -89,8 +87,7 @@ a {
 height of 8rem breaks the design at the desktop size */
 
 #services {
-  display: flex;
-  /*border: 1px dashed yellow;*/
+  display: inline-flex;
   width: 100%;
   justify-content: center;
   text-align: center;
@@ -99,7 +96,6 @@ height of 8rem breaks the design at the desktop size */
 }
 
 #content .box {
-  /*border: 1px dashed red;*/
   padding-right: 6rem;
 }
 
@@ -132,15 +128,84 @@ footer {
   width: 960px;
   margin: 0 auto;
   display: flex;
-  /*border: 1px dashed red;*/
 }
 
 footer img {
   margin: 4rem 1rem 4rem 4rem;
   height: 1.5rem;
-  /*border: 1px dashed orange;*/
 }
 
 footer p {
   margin: 4rem 0rem 4rem 1rem;
+}
+
+/* Tablet Sized Break Points */
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    width: 100%;
+    height: auto;
+  }
+
+  header {
+    background-position: 36%;
+  }
+
+  #banner {
+    width: 100%;
+    height: 22rem;
+  }
+
+  nav li {
+    padding: 0.75rem;
+  }
+
+  .subcontainer {
+    margin-bottom: 5rem;
+  }
+  #tagline {
+    margin-right: 2rem;
+  }
+  #tagline h1 {
+    font-size: 1.33rem;
+    padding: 0.75rem 4rem;
+  }
+
+  #content .box {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  #services img{
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Phone Sized Break Points */
+
+@media only screen and (max-width: 480px) {
+  #menu1 {
+    display: none;
+  }
+  #menu2 {
+    display: inline;
+  }
+  .container {
+    width: 100%;
+  }
+
+  #content .box {
+    padding: 0rem;
+  }
+
+
+  #services {
+    /*width: 100%;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*height: auto;*/
+  }
+
+
 }
